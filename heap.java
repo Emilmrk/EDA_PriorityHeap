@@ -33,7 +33,8 @@ public class heap<E extends Comparable<E>> implements TADheap<E> {
 		
 	}
 	public void remove() {
-		E maximoE = this.array.get(0);
+		this.array.remove(0);
+		ActualizarPrioridad();
 	}
 	public String toString() {
 		String lectura="";
