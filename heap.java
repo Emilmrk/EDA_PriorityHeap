@@ -39,7 +39,7 @@ public class heap<E extends Comparable<E>> implements TADheap<E> {
 	public String toString() {
 		String lectura="";
 		for (int i = 0; i < this.array.size(); i++) {
-			lectura=lectura+" "+this.array.get(i);
+			lectura=lectura+" "+this.array.get(i)+"\t";
 		}
 		return lectura;
 	}
@@ -58,5 +58,10 @@ public class heap<E extends Comparable<E>> implements TADheap<E> {
 		return priority==this.heapPriory&&array.size()<Math.pow(2, this.heapPriory+1)-1;//si la prioridad dada es igual a la prioridad del arbol y el arbol no esta lleno (tamaño del arbol es menor que el tam) 
 		//return this.array.size()!=Math.pow(2, priority)-1;//si el tamaño del arreglo es diferente a 2^prioridad -1
 	}
+	public E getElementk(int k) {
+		return array.get(k);
+	}
+	public E ultimo() {
+		return this.array.get(this.array.size()-1);
+	}
 }
-
